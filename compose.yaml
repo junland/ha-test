@@ -19,4 +19,4 @@ services:
       - "80:80"
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
-      - /etc/ssl/certs:/etc/ssl/certs:ro
+      - /etc/ssl/certs/lego:/etc/ssl:ro
