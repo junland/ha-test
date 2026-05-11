@@ -2,7 +2,6 @@ services:
   homeassistant:
     image: ghcr.io/home-assistant/home-assistant:stable
     container_name: homeassistant
-    hostname: homeassistant
     restart: unless-stopped
     environment:
       TZ: ${TZ:-UTC}
@@ -12,7 +11,6 @@ services:
   haproxy:
     image: haproxy:latest
     container_name: haproxy
-    hostname: haproxy
     restart: unless-stopped
     depends_on:
       - homeassistant
@@ -20,3 +18,4 @@ services:
       - "8080:8080"
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      - /etc/ssl/certs:/etc/ssl:ro
