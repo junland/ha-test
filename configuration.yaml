@@ -7,3 +7,15 @@ http:
     - 10.89.5.0/24
     - 10.89.0.0/24
     - 192.168.1.0/24
+  cors_allowed_origins:
+    - https://homeassistant.local:8123
+    - https://homeassistant.local
+    - https://homeassistant:8123
+    - https://homeassistant
+    - https://homeassistant.local:443
+    - https://home.jlab.space:8123
+    - https://home.jlab.space
+    - https://home.jlab.space:443
+    - https://home.lucoa.jlab.space:8123
+    - https://home.lucoa.jlab.space
+    - https://home.lucoa.jlab.space:443
