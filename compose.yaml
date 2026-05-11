@@ -15,7 +15,8 @@ services:
     depends_on:
       - homeassistant
     ports:
-      - "8080:8080"
+      - "443:443"
+      - "80:80"
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
       - /etc/ssl/certs:/etc/ssl:ro
